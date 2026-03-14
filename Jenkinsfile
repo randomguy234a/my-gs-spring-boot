@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Build Fat JAR') {
             steps {
-                sh 'chmod +x mvnw'
-                sh './mvnw clean package -DskipTests'
+                // 'bat' is the Windows version of 'sh'
+                bat 'mvnw.cmd clean package -DskipTests'
             }
         }
     }
